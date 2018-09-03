@@ -1,0 +1,18 @@
+**1. create table
+    create 'ns_hbasemonitor:cluster_monitor',
+    {NAME=>'requestcount'},
+    {NAME=>'readrequestcount'},
+    {NAME=>'writerequestcount'},
+    {NAME=>'filesize'},
+    {NAME=>'memsize'},
+    {NAME=>'regionnum'},
+    {NAME=>'coprocessor'},
+    {NAME=>'cm'}
+
+    create 'ns_hbasemonitor:cluster_monitor',
+    {NAME=>'tm'},
+    {NAME=>'columnfamilyname'},
+    {NAME=>'namespace'},
+    {NAME=>'tablename'}
+##2. compile code
+   mvn assembly:assembly

@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>HBaseMonitor</groupId>
+	<artifactId>HBaseMonitor</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<dependencies>
+	<dependency>
+     <groupId>jdiff</groupId>
+        <artifactId>jdiff</artifactId>
+       <version>1.0.7</version>
+      </dependency>
+		<dependency>
+
+			<groupId>org.apache.hadoop</groupId>
+
+			<artifactId>hadoop-hdfs</artifactId>
+
+			<version>2.7.1</version>
+
+		</dependency>
+
+		<!--https://mvnrepository.com/artifact/org.apache.hbase/hbase-client -->
+
+		<dependency>
+
+			<groupId>org.apache.hbase</groupId>
+
+			<artifactId>hbase-client</artifactId>
+
+			<version>1.1.2</version>
+
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.41</version>
+		</dependency>
+	</dependencies>
+</project>

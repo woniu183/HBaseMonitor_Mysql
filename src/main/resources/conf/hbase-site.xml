@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+/**
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<configuration>
+<property>
+ <name>hbase.rootdir</name>
+ <value>hdfs://SuningHadoop2/hbasenew1</value>  
+<description>The directory shared by RegionServers.</description>
+ </property>
+ <property>
+<name>hbase.cluster.distributed</name> 
+ <value>true</value>
+ </property>
+<property>
+ <name>hbase.zookeeper.property.clientPort</name>
+ <value>2015</value> 
+</property>
+<property>
+ <name>hbase.zookeeper.quorum</name>
+ <value>namenode1-prd2.cnsuning.com,namenode2-prd2.cnsuning.com,resourcemgr1-prd2.cnsuning.com,resourcemgr2-prd2.cnsuning.com,slave1-prd2.cnsuning.com</value> 
+</property>
+<property>
+ <name>hbase.zookeeper.property.dataDir</name>
+ <value>/data/hadoop/zookeeper</value> 
+</property>
+<property>
+<name>zookeeper.znode.parent</name>
+<value>/hbasen1</value>
+</property>
+<property>
+ <name>hbase.zookeeper.property.clientPort</name>
+ <value>2015</value> 
+</property>
+<property>
+  <name>hbase.security.authentication</name>
+  <value>simple</value>
+</property>
+<property>
+  <name>hbase.security.authorization</name>
+  <value>true</value>
+</property>
+<property>
+  <name>hbase.coprocessor.abortonerror</name>
+  <value>false</value>
+</property>
+<property>
+  <name>hbase.coprocessor.master.classes</name>
+  <value>org.apache.hadoop.hbase.security.access.AccessController</value>
+</property>
+<property>
+  <name>hbase.coprocessor.region.classes</name>
+  <value>org.apache.hadoop.hbase.security.access.AccessController</value>
+</property>
+<property>
+  <name>hbase.coprocessor.regionserver.classes</name>
+  <value>org.apache.hadoop.hbase.security.access.AccessController</value>
+</property>
+<property>  
+  <name>hbase.replication</name>  
+  <value>true</value>  
+</property> 
+<property>
+  <name>hbase.master.loadbalancer.class</name>
+  <value>org.apache.hadoop.hbase.master.balancer.SimpleLoadBalancer</value>
+</property>
+<property>
+<name>replication.source.nb.capacity</name>
+  <value>5000</value>
+  <description>主集群每次像备集群发送的entry最大的个数，推荐5000.可根据集群规模做出适当调整,slave集群服务器如果较多，可适当增大</description>
+</property>
+<property>
+  <name>replication.source.size.capacity</name> 
+  <value>4194304</value> 
+  <description>主集群每次像备集群发送的entry的包的最大值大小，不推荐过大</description>
+</property>
+<property>
+  <name>replication.source.ratio</name>
+  <value>1</value>
+  <description>主集群里使用slave服务器的百分比</description>
+</property>
+<property>
+  <name>hbase.regionserver.wal.enablecompression</name>
+  <value>false</value>
+  <description>主集群关闭hlog的压缩</description>
+</property>
+<property>
+  <name>replication.sleep.before.failover</name>
+  <value>5000</value>
+  <description>主集群在regionserver当机后几毫秒开始执行failover</description>
+</property>
+<property>
+   <name>hbase.coprocessor.user.region.classes</name>
+   <value>org.apache.hadoop.hbase.coprocessor.AggregateImplementation</value>
+</property>
+<property>
+  <name>yarn.resourcemanager.ha.enabled</name>
+   <value>true</value>
+</property>
+</configuration>
