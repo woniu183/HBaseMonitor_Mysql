@@ -36,7 +36,7 @@
 </property>
 <property>
  <name>hbase.zookeeper.quorum</name>
- <value>namenode1-prd2.cnsuning.com,namenode2-prd2.cnsuning.com,resourcemgr1-prd2.cnsuning.com,resourcemgr2-prd2.cnsuning.com,slave1-prd2.cnsuning.com</value> 
+ <value>******</value> 
 </property>
 <property>
  <name>hbase.zookeeper.property.dataDir</name>
